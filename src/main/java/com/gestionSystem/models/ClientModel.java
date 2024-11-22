@@ -72,6 +72,7 @@ public class ClientModel implements CRUD {
             while (objResult.next()) {
                 Client objClient = new Client();
 
+                objClient.setId(objResult.getInt("client.id"));
                 objClient.setName(objResult.getString("client.full_name"));
                 objClient.setEmail(objResult.getString("client.email"));
                 objClient.setCellphone(objResult.getInt("client.cellphone"));
